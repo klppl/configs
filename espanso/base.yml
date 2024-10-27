@@ -275,3 +275,12 @@ matches:
       type: shell
       params:
         cmd: Invoke-WebRequest api.ipify.org -UseBasicParsing -Headers @{"accept"="text/plain"} | Select-Object -Expand Content
+
+  - trigger: :wtc
+    replace: "{{output}}"
+    vars:
+    - name: output
+      type: shell
+      params:
+      #cmd: Invoke-WebRequest whatthecommit.com/index.txt -UseBasicParsing -Headers @{"accept"="text/plain"} | Select-Object -Expand Content
+        cmd: curl https://whatthecommit.com/index.txt
