@@ -1,10 +1,6 @@
 # espanso match file
 
 global_vars:
-  - name: "remoteip"
-    type: "shell"
-    params:
-      cmd: "curl 'https://api.ipify.org'"
   - name: "signoff"
     type: "echo"
     params:
@@ -18,22 +14,23 @@ matches:
         type: date
         params:
           format: "%d-%m-%Y"
-
-  - trigger: ":shell"
+          
+  - trigger: ":getip"
     replace: "{{output}}"
     vars:
       - name: output
         type: shell
         params:
-          cmd: "echo 'Hello from your shell'"
+          cmd: "curl ifconfig.me"
 
-  - trigger: ":ip"
+  - trigger: ":winip"
     replace: "{{output}}"
     vars:
       - name: output
         type: shell
         params:
-          cmd: "curl 'https://api.ipify.org'"
+          cmd: "curl ifconfig.me"
+          shell: cmd
 
   - triggers: [:srch-ddg, :search-duckduckgo]
     replace: 'https://duckduckgo.com/?q='
@@ -231,14 +228,6 @@ matches:
     force_clipboard: true
     replace: "https://drive.google.com/drive/u/0/my-drive"
 
-  - trigger: "//github"
-    force_clipboard: true
-    replace: "{{github_url}}"
-
-  - trigger: "//website"
-    force_clipboard: true
-    replace: "{{website}}"
-
   - trigger: "//gm"
     force_clipboard: true
     replace: "https://mail.google.com/mail/u/0/"
@@ -248,14 +237,6 @@ matches:
     vars:
       - name: "clipboard"
         type: "clipboard"
-
-  - trigger: ":mittip"
-    replace: "{{output}}"
-    vars:
-    - name: output
-      type: shell
-      params:
-        cmd: Invoke-WebRequest api.ipify.org -UseBasicParsing -Headers @{"accept"="text/plain"} | Select-Object -Expand Content
 
   - trigger: :wtc
     replace: "{{output}}"
