@@ -34,4 +34,4 @@ alias hugoserver="hugo server --noHTTPCache"
 
 alias blogga='lftp -u USERNAME,PASSWORD -e "mirror --reverse /PATH/TO/UPLOAD /" FTPSERVER'
 
-alias zenupdaet='bash <(curl https://updates.zen-browser.app/appimage.sh)'
+alias zenupdate='bash <(curl https://updates.zen-browser.app/appimage.sh)'
