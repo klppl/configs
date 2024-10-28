@@ -1,13 +1,5 @@
 # espanso match file
 
-# For a complete introduction, visit the official docs at: https://espanso.org/docs/
-
-# You can use this file to define the base matches (aka snippets)
-# that will be available in every application when using espanso.
-
-# Matches are substitution rules: when you type the "trigger" string
-# it gets replaced by the "replace" string.
-
 global_vars:
   - name: "remoteip"
     type: "shell"
@@ -19,11 +11,6 @@ global_vars:
       echo: "hälsningar\nAlexander Klippel"
 
 matches:
-  # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
-
-  # But matches can also be dynamic:
-
-  # Print the current date
   - trigger: ":date"
     replace: "{{mydate}}"
     vars:
@@ -32,7 +19,6 @@ matches:
         params:
           format: "%d-%m-%Y"
 
-  # Print the output of a shell command
   - trigger: ":shell"
     replace: "{{output}}"
     vars:
@@ -41,7 +27,6 @@ matches:
         params:
           cmd: "echo 'Hello from your shell'"
 
-  # Outputs public IP address
   - trigger: ":ip"
     replace: "{{output}}"
     vars:
@@ -50,7 +35,6 @@ matches:
         params:
           cmd: "curl 'https://api.ipify.org'"
 
-  # Quick search, formulates the URL params for searching a given website
   - triggers: [:srch-ddg, :search-duckduckgo]
     replace: 'https://duckduckgo.com/?q='
   - triggers: [:srch-wiki, :search-wikipedia]
@@ -167,9 +151,6 @@ matches:
 
   - trigger: ":cloud"
     replace: "☁"
-
-  - trigger: ":crayon"
-    replace: "''((̲̅ ̲̅(̲̅C̲̅r̲̅a̲̅y̲̅o̲̅l̲̲̅̅a̲̅( ̲̅((>''"
 
   - trigger: ":boombox"
     replace: "''♫♪.ılılıll|̲̅̅●̲̅̅|̲̅̅=̲̅̅|̲̅̅●̲̅̅|llılılı.♫♪''"
