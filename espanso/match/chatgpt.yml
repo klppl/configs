@@ -1,5 +1,4 @@
 # Configuration file for prompts to use with ChatGPT, Bard, and other LLMs.
-#
 
 matches:
   - trigger: ":summarize"
@@ -45,6 +44,7 @@ matches:
   - trigger: ":gptjformat"
     replace: "Please fix the formatting of the following text. Be sure to include all details and keep content as accurate as possible:"
 
+# market and stock analysis
   - trigger: ":marketanalysis"
     replace: |
       Analyze the current trends in the crypto futures market, focusing on {{sector}}. Identify any emerging patterns and suggest potential investment opportunities. Consider recent market data and industry news in your analysis.
@@ -117,6 +117,7 @@ matches:
       - name: sector_or_crypto
         type: text
 
+# fitness and health
   - trigger: ":workoutroutine"
     replace: |
       Help me design a workout routine for {{goal}} that fits my schedule of {{days_per_week}} days per week and includes my preferred exercises. Include warm-up, main exercises, and cooldown.
