@@ -1,0 +1,131 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+/* Root Variables */
+:root {
+  /* Primary Colors */
+  --primary-bg: #121212; /* Main background */
+  --secondary-bg: #1c1c1c; /* Secondary background */
+  --highlight-color: #3a3a3a; /* Highlight for hover or active states */
+  --text-color: #e0e0e0; /* Main text color */
+  --text-muted: #8e8e8e; /* Muted text color */
+  --accent-color: #bb86fc; /* Accent color (buttons, links, highlights) */
+  
+  /* Borders and Shadows */
+  --border-color: rgba(255, 255, 255, 0.1); /* Subtle borders */
+  --shadow-color: rgba(0, 0, 0, 0.5); /* Subtle shadows */
+  
+  /* Font */
+  --font-family: 'Inter', sans-serif;
+  
+  /* Misc */
+  --scrollbar-bg: rgba(255, 255, 255, 0.1);
+  --scrollbar-thumb: rgba(255, 255, 255, 0.3);
+}
+
+/* General App Styling */
+body {
+  font-family: var(--font-family);
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  overflow: hidden; /* Prevent unintended scrolling */
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: var(--secondary-bg);
+  border-right: 1px solid var(--border-color);
+}
+
+/* Chat Area */
+.chat {
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  border-left: 1px solid var(--border-color);
+}
+
+/* Header and Footers */
+.header, .footer {
+  background-color: var(--secondary-bg);
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Buttons */
+button {
+  background-color: var(--secondary-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 8px 12px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--highlight-color);
+  border-color: var(--accent-color);
+  cursor: pointer;
+}
+
+/* Input Fields */
+input, textarea {
+  background-color: var(--secondary-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 8px;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+/* Links */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+/* Context Menus */
+.context-menu {
+  background-color: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+/* Modals */
+.modal {
+  background-color: var(--primary-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 20px var(--shadow-color);
+  border-radius: 8px;
+}
+
+/* Mentions and Highlights */
+.mention {
+  background-color: var(--accent-color);
+  color: var(--primary-bg);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+/* Minimal Transitions for Interactions */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
