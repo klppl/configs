@@ -1,131 +1,1081 @@
-/* Import Font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+/* @import url("https://jAba65.github.io/Discord%20Theme/jAba.css"); */
 
-/* Root Variables */
 :root {
-  /* Primary Colors */
-  --primary-bg: #121212; /* Main background */
-  --secondary-bg: #1c1c1c; /* Secondary background */
-  --highlight-color: #3a3a3a; /* Highlight for hover or active states */
-  --text-color: #e0e0e0; /* Main text color */
-  --text-muted: #8e8e8e; /* Muted text color */
-  --accent-color: #bb86fc; /* Accent color (buttons, links, highlights) */
-  
-  /* Borders and Shadows */
-  --border-color: rgba(255, 255, 255, 0.1); /* Subtle borders */
-  --shadow-color: rgba(0, 0, 0, 0.5); /* Subtle shadows */
-  
-  /* Font */
-  --font-family: 'Inter', sans-serif;
-  
-  /* Misc */
-  --scrollbar-bg: rgba(255, 255, 255, 0.1);
-  --scrollbar-thumb: rgba(255, 255, 255, 0.3);
+    --app-bg: url(https://i.giphy.com/YOexokCCddG4HKLuNW.webp);
+    --blur-bg: 40px;
+    --brightness-bg: 0.3;
 }
 
-/* General App Styling */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://eject37.github.io/DiscordTheme/HideTrash.css");
+@import url("https://eject37.github.io/DiscordTheme/ScrollBar.css");
+@import url("https://eject37.github.io/DiscordTheme/RoundUserPanel.css");
+@import url("https://eject37.github.io/DiscordTheme/OldMicrophone.css");
+@import url("https://eject37.github.io/DiscordTheme/ChangeSearchBarToIcon.css");
+@import url("https://eject37.github.io/DiscordTheme/RegionFlags.css");
+
+:root {
+    --app-bg: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTAwd3FkaHY1NGUxNjY3cTJtNDRoNzI1eGg3c2g2ZmdsaXdwdDBuMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cjojgtiigyloyCg3r9/giphy.webp);
+    --blur-bg: 80px;
+    --brightness-bg: 0.3;
+    --border-main: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark {
+    /* Border в чате на сообщениях где код */
+    --background-secondary-alt: rgba(255, 255, 255, 0.05);
+    --background-tertiary: var(--background-secondary-alt);
+    /* Бейджики  уведомлений */
+    --status-danger: rgba(202, 90, 99, 0.9);
+    /* ссылки*/
+    --text-link: rgb(125, 170, 233);
+    /* много где */
+    --background-primary: rgba(245, 245, 245, 0.1);
+    /* много где используется*/
+    --background-secondary: rgba(255, 255, 255, 0.05);
+    /* загруска сообщений в чате*/
+    --bg-overlay-chat: rgba(255, 255, 255, 0.05);
+    /* контекстное меню КРАСНАЯ кнопкА при наведении */
+    --button-danger-background: rgba(250, 100, 135, 0.25);
+    /* наводишься там где мьют микро слева снизу */
+    --background-modifier-selected: rgba(190, 190, 190, 0.25);
+    --background-floating: rgba(190, 190, 190, 0.25);
+    --status-positive-background: rgba(190, 190, 190, 0.25);
+    /* bar */
+    --control-brand-foreground-new: rgba(100, 100, 100, 0.8);
+
+    --text-brand: white;
+}
+:root {
+    /* Шрифт */
+    --font-primary: "Montserrat", Arial, sans-serif;
+    --font-display: "Montserrat", Arial, sans-serif;
+    --font-headline: "Montserrat", Arial, sans-serif;
+    --status-positive: rgba(255, 255, 255, 0.7);
+    --text-positive: rgba(255, 255, 255, 0.67);
+    /* Цвет загрузки демок и прочего */
+    --primary-700: rgba(200, 200, 200, 0.1);
+    /* bar */
+    --brand-500: rgba(100, 100, 100);
+    /* Бордер чекбоксов, спиннер */
+    --brand-400: rgba(170, 170, 170, 0.4);
+    /* текст какой то */
+    --brand-560: rgb(220, 220, 220);
+    /* контекстное меню кнопки при наведении */
+    --brand-530: rgba(230, 240, 255, 0.15);
+    /* контекстное меню когда зажал */
+    --brand-600: rgba(255, 255, 255, 0.3);
+    /* мьют микро */
+    --red-400: rgba(202, 90, 116, 0.7);
+    /* стрелочка наводишься там где вайфай  */
+    --green-360: rgba(230, 240, 255, 0.15);
+    /* задний цвет там где сервер выбираешь */
+    --primary-630: rgba(230, 240, 255, 0.15);
+    /* можно выключить микрофон */
+    --primary-860: rgba(202, 90, 99, 0.9);
+    /* мьют микро на панели снизу слева */
+    --important-messages-color: #fdbdbd;
+    /* Длина и отступ панели табов в настройках */
+    --custom-standard-sidebar-view-sidebar-content-width: 217px;
+    --custom-standard-sidebar-view-standard-padding: 100px;
+}
+
+/* Шрифт */
+:root:lang(bg),
+:root:lang(el),
+:root:lang(ru),
+:root:lang(uk) {
+    --font-primary: "Montserrat", Arial, sans-serif;
+    --font-display: "Montserrat", Arial, sans-serif;
+    --font-headline: "Montserrat", Arial, sans-serif;
+}
+
+/* гифка для всего дс */
 body {
-  font-family: var(--font-family);
-  background-color: var(--primary-bg);
-  color: var(--text-color);
-  overflow: hidden; /* Prevent unintended scrolling */
+    background: var(--app-bg) no-repeat;
+    background-position: 15%;
+    background-size: 105% 105%;
 }
 
-/* Sidebar */
-.sidebar {
-  background-color: var(--secondary-bg);
-  border-right: 1px solid var(--border-color);
+/* добавляет блюр и затемнение на задний фон */
+.bg_d4b6c5 {
+    backdrop-filter: blur(var(--blur-bg)) brightness(var(--brightness-bg));
 }
 
-/* Chat Area */
-.chat {
-  background-color: var(--primary-bg);
-  color: var(--text-color);
-  border-left: 1px solid var(--border-color);
+/* Credits */
+.info_c5a741::before {
+    content: "Theme by jAba & Eject";
+    color: var(--text-muted);
+    font-size: 14px;
+    padding-bottom: 10px;
+    display: block;
 }
 
-/* Header and Footers */
-.header, .footer {
-  background-color: var(--secondary-bg);
-  color: var(--text-color);
-  border-bottom: 1px solid var(--border-color);
+/* убирает задний цвет для гифки */
+.chatContent_a7d72e,
+.chat_a7d72e,
+.sidebar_a4d4d9,
+.panel_bf1a22,
+.container_adcaac,
+.container_b2ca13,
+.wrapper_fea3ef,
+.callContainer_d880dc,
+.wrapper_d880dc,
+.panels_a4d4d9,
+.privateChannels_f0963d,
+.scroller_c47fa9,
+.themedBackground_d0696b,
+.themed_fc4f04,
+.bg_d4b6c5,
+#app-mount,
+.app_a01fb1,
+.codeView_d8e2d0.hljs,
+.menu_d90b3d:not(.menu_ad5fac),
+.embedFull_b0068a,
+.container_cbd271,
+.members_cbd271,
+.container_ee69e0,
+.member_cbd271,
+.sidebarRegionScroller_c25c6d,
+.standardSidebarView_c25c6d,
+.layer_d4b6c5,
+.contentRegionScroller_c25c6d,
+.contentRegion_c25c6d,
+.container_c2739c,
+.nowPlayingColumn_c2739c,
+.container_bf550a,
+.inset_ac5d22,
+.attachedBars_d0696b,
+.background_b69b77,
+.fieldList_b69b77,
+.premiumBackground_c6d722,
+.overlayBackground_c69a7b,
+.bannerNormal_ab876d,
+.userProfileInnerThemedNonPremium_c69a7b,
+.container_f1fd9c,
+.header_f1fd9cm,
+.mediaBarInteractionVolume_f7877e,
+.medium_f9a4c9,
+.modal_f31a4d,
+.authBoxExpanded_dc6abe,
+.childWrapperNoHoverBg_f90abb,
+.scroller_c6b11b,
+.thin_c49869.scrollerBase_c49869.fade_c49869,
+.brand_a0,
+.streamPreview_ba4b17 {
+    background: transparent !important;
 }
 
-/* Buttons */
-button {
-  background-color: var(--secondary-bg);
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
-  border-radius: 5px;
-  padding: 8px 12px;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+/* фиксит 4px title bar */
+.withFrame_a934d8 {
+    margin-top: 0;
+    padding-top: 4px;
 }
 
-button:hover {
-  background-color: var(--highlight-color);
-  border-color: var(--accent-color);
-  cursor: pointer;
+/* убирает залупу */
+.form_a7d72e:before, /*градиент возле чатбокса*/
+.form_a7d72e:after,
+.children_fc4f04:after,/* какой то градиент сверху хз */
+.protip_f4e139, /* нахуй оно надо (в найти или начать беседу) */ 
+.block_b5053a, /* нахуй оно надо (в закрепах) */
+.tutorial_c36bbe.shown_c36bbe, /* нахуй оно надо (подсказка в найти или начать беседу) */
+.userSettingsSecurityImage_ad4a7c,
+.ready_e40c16, /* нахуй оно надо (моя учетная запись)*/ 
+.content_a7d72e:before,/* черная полосаааа*/
+.container_da1432, /*реклама*/
+.footerImage_fab929,.tipTitle_e40c16,.buttonContainer_df39bd,.statusBubbleOuter_d0a252::after,
+.statusBubbleOuter_d0a252::before {
+    display: none !important;
 }
 
-/* Input Fields */
-input, textarea {
-  background-color: var(--secondary-bg);
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  padding: 8px;
+/* Выделение текста */
+::selection {
+    background: rgba(94, 98, 106, 0.4) !important;
 }
 
-input:focus, textarea:focus {
-  border-color: var(--accent-color);
-  outline: none;
+/* Кнопки в голосовом чате (офф микро, дать демку, выйти из звонка) */
+#app-mount .staticButton_ef18ee,
+#app-mount .contextMenuNub_ef18ee {
+    background-color: rgba(255, 255, 255, 0.1) !important; /*off call*/
+    color: rgb(255, 255, 255) !important;
+}
+#app-mount .staticButton_ef18ee:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important; /*off call*/
 }
 
-/* Links */
-a {
-  color: var(--accent-color);
-  text-decoration: none;
+/* демка */
+.callContainer_d880dc {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.15),
+        rgb(0, 0, 0, 0.1)
+    ) !important;
+    box-shadow: inset 0 0 10px rgba(100, 100, 100, 0.1);
+    border-radius: 10px;
+    border: var(--border-main);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+/* фикс демки в полном экране */
+.callContainer_d880dc:has(.actionRow_f8a4f3) {
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
 }
 
-a:hover {
-  text-decoration: underline;
+/* меняет градиент при навидиении там где демка */
+.gradientContainer_dd069c {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.04) 0%,
+        rgba(0, 0, 0, 0) 50%
+    );
 }
 
-/* Scrollbars */
-::-webkit-scrollbar {
-  width: 8px;
-  background-color: var(--scrollbar-bg);
+/* ввод сообщений (chatbox) */
+.channelTextArea_a7d72e {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: var(--border-main);
+    border-radius: 15px;
+    box-shadow: inset 0 0 5px rgba(100, 100, 100, 0.2);
+}
+.scrollerSpacer_e2e187 {
+    height: 25px;
+}
+.form_a7d72e {
+    margin-top: 0;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: var(--scrollbar-thumb);
-  border-radius: 4px;
+/* Пользователи слева в списке, справа на серверах, каналы на серверах */
+.interactive_f5eb4b,
+.member_cbd271,
+.layout_d808b0,
+.modeSelected_d8bfb3 .link_d8bfb3,
+.wrapper_d8bfb3 .link_d8bfb3 {
+    transition: 0.1s;
+    margin-left: 5px;
+    width: 95%;
+    border-radius: 10px;
+}
+.selected_f5eb4b,
+.interactive_f5eb4b:hover,
+.member_cbd271:hover,
+.modeSelected_d8bfb3 .link_d8bfb3,
+.modeSelected_d8bfb3:hover .link_d8bfb3 {
+    background: linear-gradient(
+        rgba(184, 184, 184, 0.225),
+        rgba(255, 255, 255, 0.144)
+    );
+    margin-left: 7px;
+}
+.modeSelected_d8bfb3 .link_d8bfb3,
+.wrapper_d8bfb3 .link_d8bfb3 {
+    transition: none;
 }
 
-/* Context Menus */
-.context-menu {
-  background-color: var(--secondary-bg);
-  border: 1px solid var(--border-color);
-  box-shadow: 0 4px 10px var(--shadow-color);
+/* Строка поиска слева сверху */
+.searchBarComponent_f0963d {
+    margin-left: 7px;
+    width: 94% !important;
 }
 
-/* Modals */
-.modal {
-  background-color: var(--primary-bg);
-  border: 1px solid var(--border-color);
-  box-shadow: 0 8px 20px var(--shadow-color);
-  border-radius: 8px;
+/* Контекстное меню Blur */
+.menu_d90b3d:not(.menu_ad5fac, [id="account"], [id="status"]):before {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(20px);
+    pointer-events: none;
+    z-index: -1;
+}
+/* профиля когда тыкаешь */
+.banner_d5fdb1.divider_c3e427.biteSizeBanner_c3e427,
+.banner_d5fdb1.divider_c3e427.fullSizeBanner_c3e427.roundedBanner_c3e427,
+.fullSizeInnerThemed_c69a7b {
+    background: rgba(255, 255, 255, 0.03) !important;
 }
 
-/* Mentions and Highlights */
-.mention {
-  background-color: var(--accent-color);
-  color: var(--primary-bg);
-  border-radius: 4px;
-  padding: 2px 6px;
+.container_b6cd66 {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(20px);
+    box-shadow: inset 0 0 15px rgba(100, 100, 100, 0.1) !important;
 }
 
-/* Minimal Transitions for Interactions */
-* {
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+/* профиль слева снизу */
+.biteSizeInnerThemed_c69a7b {
+    background: rgba(255, 255, 255, 0.03) !important;
+}
+/* фикс когда открыта картинка */
+#image-context[class*="menu_d90b3d"] {
+    backdrop-filter: blur(15px) brightness(var(--brightness-bg));
+}
+.menu_d90b3d:not(.menu_ad5fac) .submenu_d90b3d:before {
+    width: calc(100% - 16px);
+    left: 8px;
+}
+
+/* панель пользователя */
+[class^="sidebar_"] [class^="panels_"] {
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.45),
+        inset 0 0 10px rgba(100, 100, 100, 0.2);
+}
+[class^="sidebar_"] [class^="panels_"] [class^="container_"],
+[class^="sidebar_"] [class^="panels_"] [class^="panel_"] {
+    background-color: rgba(100, 100, 100, 0.04) !important;
+}
+
+/* Загружаемые файлы и разные фоны в сообщениях */
+.attachment_b52bef.newMosaicStyle_b52bef,
+.newMosaicStyle_d8e2d0 .codeView_d8e2d0,
+.newMosaicStyle_d8e2d0 .footer_d8e2d0,
+.newMosaicStyle_d8e2d0 .textContainer_d8e2d0,
+.grid_b0068a,
+.wrapper_a71a1c,
+.markup_f8f345 code,
+.content_c2654d {
+    background: rgba(100, 100, 100, 0.15);
+}
+
+/*блюр*/
+.wrapper_f7e168,
+.quickswitcher_f4e139,
+.tooltipPrimary_b6c360,
+.tooltipGreen_b6c360,
+.newMessagesBar_cf58b5,
+.tooltipGrey_b6c360,
+.streamPreview_ba4b17 button,
+#emoji-picker-tab-panel,
+.root_cbf230.elevationHigh_ff8688,
+.container_b6cd66,
+.body_adbea6,
+.bar_eba0ba,
+#popout_353,
+#popout_459,
+.streamPreview_adbea6,
+.popout_a35965 {
+    backdrop-filter: blur(10px) !important;
+}
+
+/* При наведении в чате на сообщение справа тул панель с действиями */
+.wrapper_f7e168 {
+    border-radius: 10px;
+    border: 1px solid var(--background-secondary-alt);
+    background: rgba(165, 165, 165, 0.15);
+}
+
+/* Ссылки в чате */
+a.anchor_af404b > span:not(.username_de3235) {
+    background: linear-gradient(
+        90deg,
+        rgb(78, 208, 255),
+        rgb(230, 98, 230),
+        rgb(171, 189, 56)
+    );
+    color: transparent;
+    background-clip: text;
+}
+
+/* друзья */
+.wrapper_cd82a7,
+.section_cd82a7 {
+    background: rgba(100, 100, 100, 0.15);
+}
+.outer_ac5d22.interactive_ac5d22:hover,
+.theme-dark .outer_ac5d22.active_ac5d22 {
+    background: rgba(100, 100, 100, 0.3) !important;
+}
+.actionButton_e01b91 {
+    background: rgba(100, 100, 100, 0.3) !important;
+}
+/* друзья */
+
+/* поиск нажатие */
+.quickswitcher_f4e139 {
+    background: rgba(100, 100, 100, 0.15);
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.1);
+    padding: 3%;
+    padding-right: 34px;
+}
+.input_f4e139 {
+    background: rgba(100, 100, 100, 0.1);
+    width: 103.4%;
+}
+.scroller_f4e139 {
+    background: rgba(100, 100, 100, 0.15);
+}
+
+/* Если тебя упомянули */
+.mentioned_d5deea {
+    background: rgba(226, 226, 226, 0.08) !important;
+}
+/* Линия слева в сообщении в котором тебя упомянули */
+.mentioned_d5deea:before {
+    background-color: rgba(226, 226, 226, 0.16);
+}
+
+/* теги когда тэгаешь кого то */
+.autocomplete_bcc24e {
+    background-color: rgba(35, 35, 35, 0.2) !important;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    border: 1px solid var(--background-secondary-alt);
+}
+
+/* ответить , вы просматриваете старые сообщения*/
+.replyBar_b11c5e,
+.jumpToPresentBar_cf58b5 {
+    background: rgba(100, 100, 100, 0.07);
+    border-bottom: 1px solid rgba(228, 228, 228, 0.03);
+}
+.jumpToPresentBar_cf58b5 {
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 1px solid var(--background-secondary-alt);
+}
+
+/* авторизованные пользователи */
+.cardPrimary_a298b8 {
+    background: rgba(100, 100, 100, 0.07);
+}
+/* семейный центр */
+.container_b01337,
+.container_d00e26,
+.container_a2e886 {
+    background: rgba(100, 100, 100, 0.1);
+    border: 1px solid var(--background-secondary-alt);
+}
+
+/* Настройки > Профили > Попробуйте нитро */
+.premiumFeatureBorder_c6d722 {
+    background: rgba(100, 100, 100, 0.15) !important;
+    border: 1px solid var(--background-secondary-alt);
+}
+/* категория приложений */
+.directoryContainer_da3f59 {
+    backdrop-filter: blur(var(--blur-bg)) brightness(var(--brightness-bg));
+}
+
+/* textbox */
+.input_f8bc55,
+.input_f8bc55:hover {
+    background: rgba(100, 100, 100, 0.2) !important;
+    border: 1px solid var(--background-secondary-alt);
+}
+.input_f8bc55.focused_f8bc55,
+.input_f8bc55:focus {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+/* Настройки > Профили > Обо мне (textbox) */
+.bioTextArea_ccf27d {
+    background: rgba(100, 100, 100, 0.2) !important;
+    border: var(--border-main);
+}
+
+/* предпросмотр профиля */
+.userProfileInnerThemedNonPremium_c69a7b {
+    border: var(--border-main);
+}
+
+/* SelectBox (Настройки > Конфиденциальность) */
+.lookFilled_f6639d.select_f6639d {
+    background: rgba(100, 100, 100, 0.2) !important;
+    border: var(--border-main);
+}
+/* open select box  */
+.popout_f6639d {
+    background: rgba(100, 100, 100, 0.2) !important;
+    backdrop-filter: blur(20px);
+    border: var(--border-main);
+}
+/* Width fix  */
+.popout_f6639d.scrollerBase_c49869 {
+    overflow: auto !important;
+}
+
+/* фильтр спама */
+.itemFilled_eb92a8 {
+    background: rgba(100, 100, 100, 0.2) !important;
+}
+
+/* Toogle ON */
+.container_cebd1c.checked_cebd1c {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+}
+/* Toogle OFF */
+.container_cebd1c {
+    background-color: rgba(100, 100, 100, 0.4) !important;
+}
+
+/* Настройки > Самая нижняя панель */
+.card_a298b8:not(.outline_a298b8) {
+    background-color: rgba(100, 100, 100, 0.15) !important;
+}
+
+/* интеграция */
+.connection_e2a436,
+.accountButtonInner_e2a436,
+.accountBtnInner_ec99f9 {
+    background-color: rgba(100, 100, 100, 0.2) !important;
+}
+
+/* WARNING (Настройки > Горячие клавиши) */
+.vc-backup-restore-card,
+.warning_be45f6 {
+    border: 1px solid rgba(240, 230, 100, 0.4);
+}
+
+/* Настройки > Зарегистрированные игры (верхняя панель)  */
+.notDetected_fd966d {
+    background-color: rgba(100, 100, 100, 0.1) !important;
+    border: var(--border-main);
+}
+
+/* Blue + Red Buttons */
+button[class*="lookFilled_dd4f85"] {
+    background-color: rgba(150, 150, 150, 0.25) !important;
+    border-radius: 7px;
+}
+button[class*="lookFilled_dd4f85"]:hover {
+    background-color: rgba(150, 150, 150, 0.35) !important;
+}
+/* Кнопка деавторизировать */
+.lookOutlined_dd4f85.colorRed_dd4f85 {
+    border: var(--border-main);
+}
+.lookOutlined_dd4f85.colorRed_dd4f85:hover {
+    background-color: rgba(190, 30, 60, 0.3);
+    border: 1px solid rgba(190, 30, 60, 0.4);
+}
+
+/* MessageBox`ы  */
+.container_acae5d.root_f9a4c9,
+.modalSize_e1cc86.root_f9a4c9,
+.small_f9a4c9,
+.medium_f9a4c9 {
+    background-color: rgba(100, 100, 100, 0.2) !important;
+    backdrop-filter: blur(25px);
+    border-radius: 10px;
+}
+.footer_f9a4c9,
+.message_ddcc45 {
+    background-color: rgba(100, 100, 100, 0.1) !important;
+    border-radius: 10px;
+}
+
+/* Настройки > Левая панель (табы) */
+.side_a0 .selected_a0 {
+    background-color: rgba(100, 100, 100, 0.3) !important;
+}
+.side_a0 .item_a0 {
+    border-radius: 10px;
+}
+
+/* Закрепленные сообщения */
+.messagesPopoutWrap_ac90a2,
+.container_eedf95 {
+    background-color: rgba(100, 100, 100, 0.1) !important;
+    backdrop-filter: blur(35px);
+}
+.messageGroupWrapper_ac90a2 {
+    background-color: rgba(100, 100, 100, 0.1) !important;
+}
+.messagesPopoutWrap_ac90a2 {
+    margin-top: -15px; /* Фикс для margin области разговора (демки) что бы дискорд не прыгал */
+}
+/* чат */
+.themedBackground_bdf0de {
+    background-color: transparent;
+}
+
+.uploadDropModal_f82cc7 .bgScale_f82cc7 {
+    background-color: rgba(100, 100, 100, 0.3) !important;
+    backdrop-filter: blur(10px);
+}
+.uploadDropModal_f82cc7 .inner_f82cc7 .instructions_f82cc7 {
+    display: none !important;
+}
+/* Открытый поиск в диалоге (когда уже просматриваешь найденные сообщения) */
+.searchResultsWrap_c2b47d {
+    background-color: rgba(100, 100, 100, 0.2) !important;
+}
+.searchResult_ddc613 {
+    background-color: rgba(100, 100, 100, 0.1) !important;
+    border: var(--border-main);
+}
+
+/* Кнопка + (Добавить сервер) */
+.circleIconButton_db6521 {
+    background-color: rgba(200, 205, 210, 0.1) !important;
+    color: rgba(200, 200, 200, 0.8) !important;
+}
+
+/* Поиск в чате справа сверху при наведении */
+.searchBar_a46bef:hover,
+.focused_a46bef .searchBar_a46bef,
+.open_a46bef .searchBar_a46bef {
+    background-color: rgba(100, 100, 100, 0.25);
+    backdrop-filter: blur(20px);
+}
+
+/* кнопка пригласить на сервер друга */
+.inviteRowButton_cedfaf,
+.lookOutlined_dd4f85.colorGreen_dd4f85:hover {
+    background-color: rgba(100, 100, 100, 0.25);
+    border: var(--border-main) !important;
+    width: 110px;
+    border-radius: 6px;
+}
+
+/* когда кто то говорит */
+.border_ba4b17.speaking_ba4b17 {
+    box-shadow: inset 0 0 20px rgba(130, 130, 130, 0.7);
+}
+/* когда кто то говорит */
+
+/* устройстав задний цвет */
+.sessionIcon_c7a2c0,
+.legacySession_c7a2c0 .sessionIcon_c7a2c0 {
+    filter: invert();
+    background-color: rgba(100, 100, 100, 0.25) !important;
+}
+
+/* BETA где то в настройках */
+.textBadge_f05120 {
+    background-color: rgba(100, 100, 100, 0.5) !important;
+}
+
+/* ссылки при клике которые не обычные ссылки */
+.fileNameLink_b52bef,
+.link_f0135d,
+.lookLink_dd4f85 {
+    background: linear-gradient(90deg, rgb(255, 84, 132), rgb(137, 90, 255));
+    color: transparent;
+    background-clip: text;
+}
+
+/* ToolTip */
+.tooltipPrimary_b6c360,
+.tooltipGreen_b6c360 {
+    background-color: rgba(100, 100, 100, 0.2) !important;
+    border-radius: 10px;
+}
+
+/* цвет профиля когда тыкаешь сверху */
+.popoutBanner_c3e427,
+.banner_d5fdb1.modalBanner_c3e427 {
+    background-color: rgba(100, 100, 100, 0.2) !important;
+}
+.userPopoutInner_c69a7b:before {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(20px);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* идет загрузка файла */
+.attachment_b52bef {
+    background-color: rgba(100, 100, 100, 0.1) !important;
+}
+/* вставка файла в чат */
+.upload_df1eaf {
+    background-color: rgba(100, 100, 100, 0.2) !important;
+    border-radius: 10px;
+}
+/* Green Ico demka ON */
+.upperBadge_c5f96a > .iconBadge_c96c45 {
+    background-color: transparent !important;
+    background-color: rgb(71, 71, 71) !important;
+}
+
+/* Шрифт для плагина который показывает сколько времени я в голосовом канале */
+.text-xs-normal__46d75 span {
+    font-family: var(--font-primary) !important;
+}
+
+/* шрифт ГОЛОСОВАЯ СВЯЗЬ ПОДКЛЮЧЕНА */
+.contents_dd4f85 {
+    font-weight: 500;
+}
+
+/* ачивмент в профиле */
+.profileBadges_f89da9 {
+    background-color: rgba(140, 140, 140, 0.2) !important;
+}
+
+/* квадрат загрузки */
+.loadingPopout_a8c724 {
+    border-radius: 10px;
+}
+.container_e40c16.fixClipping_c7e9c6 {
+    backdrop-filter: blur(30px);
+}
+/* сверху в чате новые сообщения */
+.newMessagesBar_cf58b5 {
+    background: rgba(255, 255, 255, 0.1);
+    border: var(--border-main);
+}
+
+/* форумы на сервере */
+.mainCard_a6d69a {
+    background: rgba(255, 255, 255, 0.1);
+}
+.container_d331f1:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* сообщение при входе в дс */
+.tip_e40c16 {
+    color: transparent;
+    max-width: 1000px !important;
+}
+.tip_e40c16::before {
+    content: "Animated Glass Theme";
+    color: white !important;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+.tip_e40c16::after {
+    animation: slidein 1s;
+    content: "Updated: 20.08.2024 ";
+    color: white !important;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+@keyframes slidein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* чат ?????? */
+.chat_a7d72e.content_a7d72e.container_f1fd9c {
+    background: rgba(255, 0, 0, 1) !important;
+}
+
+/* просмотр каналов на сервере */
+.channelRow_f04d06 {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* в вашем списке каналов нет этого канала НА СЕРВЕРЕ  */
+.chatHeaderBar_efb691 {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ПОМЕТКА БОТА БОТ */
+.botTagRegular_a9e77f {
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* прN наведении на упоминание */
+.interactive:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Поставленная реакция на сообщение */
+.reactionMe_ec6b19 {
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* ветки на серверах */
+.container_e664f3 {
+    backdrop-filter: blur(25px);
+}
+
+/* Иконка дискорда слева сверху */
+.wrapper_f90abb:hover .childWrapper_f90abb,
+.wrapper_f90abb.selected_f90abb .childWrapper_f90abb {
+    background: rgba(255, 255, 255, 0.1) !important;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Кнопки в контекстном меню */
+.colorDefault_d90b3d.focused_d90b3d {
+    border-radius: 10px;
+}
+
+/* удалить сообщение в контекстом меню */
+.colorDanger_d90b3d {
+    color: rgb(202, 90, 116);
+}
+
+/* способы скама на нитро на маманта */
+.paymentPane_f66684,
+.paginator_f66684,
+.payment_a28a08 {
+    background: rgba(255, 255, 255, 0.015) !important;
+}
+
+/* панель эмодзи */
+.contentWrapper_af5dbb {
+    backdrop-filter: blur(20px);
+}
+.popoutContainer_cf58b5 {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* выбор контекстого меню галочки фон */
+.colorDefault_d90b3d.focused_d90b3d path {
+    fill: rgba(255, 255, 255, 0.3);
+}
+
+/* фон выбора сервера  */
+.regionSelectPopout_ccb5ca {
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: var(--border-main);
+}
+
+/* добавить в друзья главный экран */
+.tabBar_c2739c .addFriend_c2739c.addFriend_c2739c.addFriend_c2739c:hover {
+    background: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* добавить в друзья бордер */
+.addFriendInputWrapper_de812f:focus-within {
+    border: var(--border-main);
+}
+
+/* сведение 0 сервере */
+.container__13b2a {
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: var(--border-main);
+}
+
+/* зажатие на удалить сообщения */
+.colorDanger_d90b3d:active:not(.hideInteraction_d90b3d) {
+    background: rgba(202, 90, 116, 0.6) !important;
+}
+/* фикс бордера в контекстном меню при зажатии и отведении */
+.colorDefault_d90b3d:active:not(.hideInteraction_d90b3d) {
+    border-radius: 10px;
+}
+
+/* плагин membercount */
+.vc-membercount-widget {
+    --color-online: rgba(108, 255, 223, 0.7);
+}
+
+/* когда демку можно включить */
+.colorable_ef18ee.primaryDark_ef18ee .centerIcon_ef18ee {
+    color: rgb(255, 255, 255);
+}
+
+/* можно выключить демку */
+.colorable_ef18ee.white_ef18ee,
+.colorable_ef18ee.white_ef18ee .centerIcon_ef18ee {
+    color: rgba(202, 90, 99, 0.9);
+}
+
+/* линия под ссылками */
+.anchor_af404b {
+    text-decoration-color: rgba(255, 255, 255, 0.45) !important;
+}
+
+/* Черная линия в чате в разговоре */
+.resizeHandle_c0a559 {
+    background-color: transparent;
+}
+
+/* Уведомление о обновлении VenCord */
+.vc-notification {
+    backdrop-filter: blur(20px);
+}
+
+/* фон сообщений при наведении */
+.message_d5deea:hover {
+    background: rgba(190, 190, 190, 0.03) !important;
+}
+
+.popout__4c91, /* статус действий на сервере	 */ 
+.reactionTooltip_fba897  /* наведение на реакцию */ {
+    backdrop-filter: blur(15px) brightness(0.6);
+}
+
+/* добавить учетную запись */
+.authBoxExpanded_dc6abe,
+.modal_f31a4d {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(15px);
+}
+
+/* Add server */
+.circleIconButton_db6521:hover > .circleIcon_db6521 {
+    animation: ani-rotate 1s linear infinite;
+}
+/* статистика пинга  */
+.debugPanelStandalone_feab95 {
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+}
+
+/* верхний цвет откртия профиля */
+.settingsBanner_c3e427 {
+    background-color: rgba(100, 100, 100, 0.2) !important;
+}
+/* полоска за которую перетягиваешь звук */
+.grabber_c7a159 {
+    background-color: rgb(150 150, 150) !important;
+    border: var(--border-main);
+}
+/* выбор звуков пердежа */
+.picker_cd703d {
+    backdrop-filter: blur(15px) !important;
+}
+/* Настройки > склад подарков */
+.giftCardButton_d8f41e {
+    background-color: rgba(100, 100, 100, 0.2) !important;
+    border: var(--border-main) !important;
+}
+.giftCardButton_d8f41e:hover {
+    background-color: rgba(100, 100, 100, 0.4) !important;
+}
+/* линия прокрутки */
+.bar_c7a159,
+.markDash_c7a159 {
+    background: rgba(67, 67, 67, 0.52) !important;
+}
+
+/* линия прокрутки */
+article.embedWrapper_b558d0.embedFlexGrow_b558d0.embedFull_b0068a.embed_b0068a.markup_f8f345 {
+    border-color: rgba(200, 200, 200, 0.35) !important;
+}
+
+/* почта */
+.recentMentionsPopout_ddb5b4 {
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+}
+
+/* контекстное меню мышкой  навелся */
+.colorDefault_d90b3d.focused_d90b3d {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.colorDefault_d90b3d:active:not(.hideInteraction_d90b3d) {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* реакция на сообщение */
+#emoji-picker-tab-panel {
+    border: var(--border-main) !important;
+}
+
+.tooltipBrand_b6c360 {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* когда кто то звонит */
+.root_cbf230.elevationHigh_ff8688 {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 10px;
+}
+
+/* Стеклеянные окна */
+.searchBarComponent_f0963d, /* Строка поиска слева сверху */
+.menu_d90b3d:not(.menu_ad5fac), /* Контекстное меню */ 
+.searchBar_e7c031,   /* поиск в настройках */ 
+.searchBarComponent_f0963d  /*поиск в главном менбю*/ {
+    background: rgba(190, 190, 190, 0.05) !important;
+    border-radius: 10px !important;
+}
+
+/* профиль когда тыкаешь снизу слева */
+.biteSizeInner_c69a7b::before {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(20px);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* цветовая панель в зависимости от цвета аватарки */
+.banner_d5fdb1 {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* добавить статус */
+.statusBubbleShape_d0a252 {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.allow_d25d19.selected_d25d19 {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.passthrough_d25d19.selected_d25d19 {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* наве6стись на канал сервера */
+.popout_c5b389 {
+    backdrop-filter: blur(20px);
+    border: var(--border-main);
+    border-radius: 10px;
+}
+
+#popout_2709 {
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+}
+
+#app-mount
+    div[class*="controlButton_b6e2f9"]
+    button[aria-label="Прекратить просмотр"]
+    svg
+    path {
+    fill: rgba(202, 90, 99, 0.9) !important;
+}
+
+.statusBubbleSingleLineWithTextShape_d0a252 {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+#app-mount div > div[aria-label="Другие настройки"] {
+    background: transparent !important;
+    box-shadow: inset 0 0 10px rgb(100, 100, 100, 0.7);
+}
+
+.vc-settings-quickActions-pill:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Скрываем снизу слева помойку от 16.11.2024 */
+.footer_f8ec41 {
+    display: none !important;
+}
+
+@keyframes ani-rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
